@@ -1,15 +1,21 @@
 # BootCamp
 
-1. Make two get route
+1. Make three get route and a post route
+
+
+
 ```
-// Settings
+// Import
 const express = require('express');
 const bodyParser = require('body-parser');
+
+// Settings
 let app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
+// Temporary data for the bootcamp
 let campgrounds = [
   { name: "Dhaka", image: "https://farm8.staticflickr.com/7357/8945295870_d3fc5fdbee.jpg" },
   { name: "Uttara", image: "https://farm8.staticflickr.com/7357/8945295870_d3fc5fdbee.jpg" },
@@ -33,8 +39,10 @@ app.post('/campgrounds', (req, res) => {
   let name = req.body.name;
   let image = req.body.image;
   let newCampground = { name: name, image: image };
+  
   // Add item to the campground array
   campgrounds.push(newCampground);
+  
   // Redirect back to the campground-page
   res.redirect('/campgrounds');
 });
@@ -44,7 +52,7 @@ app.get('/campgrounds/form', (req, res) => {
   res.render('form');
 });
 
-
+// App will will listen on port 3000
 app.listen(3000, () => {
   console.log("Boss! BootCamp is running on port: 3000");
 });
