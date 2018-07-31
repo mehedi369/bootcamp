@@ -1,7 +1,7 @@
 # BootCamp
 
 1. Make two get route
-`
+```
 // Settings
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -48,4 +48,4 @@ app.get('/campgrounds/form', (req, res) => {
 app.listen(3000, () => {
   console.log("Boss! BootCamp is running on port: 3000");
 });
-`
+```
