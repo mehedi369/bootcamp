@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="container" >
+	<div class="row">
+		<h2 class="text-center">Create a new campground</h2>
+		<div style="width: 30%; margin: 21px auto">
+			<form action="/index", method="POST" >
+				<div class="form-group">
+					<input class="form-control" type="text" name="name" placeholder="Name">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="image" placeholder="Enter Image">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="desc" placeholder="Descripttion">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-default btn-block">Submit</button>
+				</div>
+			</form>
+			<a href="/campgrounds">Go Back</a>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>
