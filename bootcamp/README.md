@@ -1,6 +1,6 @@
 # BootCamp
 
-# Add Mongoose
+# Add Mongoose -v2
 * Install and configure mongoose
 * Setup campground model
 * Use Campground model inside of our routes
@@ -12,11 +12,11 @@
 * Add a show route/template
 
 RESTFUL ROUTES
+---------------
 
-name				url						verb			description
-================================================
-
-INDEX				/dogs					GET       Display a list of all dog
-NEW					/dogs/new			GET       Display form to make a new dog
-CREATE			/dogs					POST      Add a new dog to DB
-SHOW				/dogs/:id			GET 			Show info about one dog
+name      |     url     |     verb   |    description   
+----------|-------------|------------|--------------------------------
+INDEX     | /index      |     GET    | Display the list of all Camps 
+NEW       | /index/form |     GET    | Display the form to make a new camp
+CREATE    | /index      |     POST   | Add a new camp with description
+SHOW      | /index/:id  |     GET    | Show info about Each Campground
